@@ -1,0 +1,13 @@
+const express = require('express');
+const app = express();
+const port = 3000;
+app.get('/',(req,res) => {
+var dateTime = require('...node-datetime');
+var date = dateTime.create();
+var formatted = date.format('Y-m-d H:M:S');
+res.send(formatted)
+});
+
+app.listen(port,() => {
+    console.log("hi");
+});
